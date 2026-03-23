@@ -7,7 +7,9 @@ const taskShema = new mongoose.Schema(
         title: { type: String, required:true, trim: true},
         done:{ type: Boolean, default: false}
     },
-    {timeStamps:true}
+    {
+        timestamps:true
+    }    
 )
 
 export default mongoose.model("Task", taskShema)
